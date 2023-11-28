@@ -71,7 +71,7 @@ public class Lab6 {
 
     } while (min > max || min < 0); {
       System.out.println();
-      bouquet.findingFlowersByLengths(min, max);
+      bouquet.displayFlowers(bouquet.findingFlowersByLengths(min, max));
     }
   }
 }

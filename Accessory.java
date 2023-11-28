@@ -31,7 +31,7 @@ public class Accessory {
    *
    * @return the price of the accessory
    */
-  public double getPrice() {
+  public int getPrice() {
     return price;
   }
 }

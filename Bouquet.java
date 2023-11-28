@@ -40,6 +40,15 @@ public class Bouquet {
   }
 
   /**
+   * Gets the accessories.
+   *
+   * @return The accessories.
+   */
+  public ArrayList<Accessory> getAccessories() {
+    return this.accessories;
+  }
+
+  /**
    * Display flowers in the bouquet.
    *
    * @param flowersList The flowers to display.
@@ -81,11 +90,14 @@ public class Bouquet {
    * @param min The minimum length of flower.
    * @param max The maximum length of flower.
    */
-  public void findingFlowersByLengths(int min, int max) {
+  public ArrayList<Flowers> findingFlowersByLengths(int min, int max) {
+    ArrayList<Flowers> flowersByLengths = new ArrayList<>();
     for (Flowers flower : this.bouquetOfFlowers) {
       if (flower.getLength() > min && flower.getLength() < max) {
-        System.out.println(flower);
+        flowersByLengths.add(flower);
       }
     }
+
+    return flowersByLengths;
   }
 }
